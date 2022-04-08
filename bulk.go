@@ -18,8 +18,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/guregu/null.v4"
 
-	"github.com/r0busta/go-shopify-graphql/v6/rand"
-	"github.com/r0busta/go-shopify-graphql/v6/utils"
+
+	"github.com/navana-tech/go-shopify-graphql/v6/rand"
+	"github.com/navana-tech/go-shopify-graphql/v6/utils"
 )
 
 const (

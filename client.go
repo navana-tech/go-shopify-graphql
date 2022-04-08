@@ -3,9 +3,10 @@ package shopify
 import (
 	"os"
 
-	graphqlclient "github.com/r0busta/go-shopify-graphql/v6/graphql"
 	"github.com/r0busta/graphql"
 	log "github.com/sirupsen/logrus"
+
+	graphqlclient "github.com/navana-tech/go-shopify-graphql/v6/graphql"
 )
 
 const (
