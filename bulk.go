@@ -18,6 +18,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/guregu/null.v4"
 
+
 	"github.com/navana-tech/go-shopify-graphql/v6/rand"
 	"github.com/navana-tech/go-shopify-graphql/v6/utils"
 )
@@ -25,6 +26,8 @@ import (
 const (
 	edgesFieldName = "Edges"
 	nodeFieldName  = "Node"
+
+	ErrorOperationResultURLEmpty = "operation result URL is empty"
 )
 
 //go:generate mockgen -destination=./mock/bulk_service.go -package=mock . BulkOperationService
@@ -205,7 +208,7 @@ func (s *BulkOperationServiceOp) BulkQuery(query string, out interface{}) error 
 	}
 
 	if url == nil || *url == "" {
-		return fmt.Errorf("Operation result URL is empty")
+		return fmt.Errorf(ErrorOperationResultURLEmpty)
 	}
 
 	filename := fmt.Sprintf("%s%s", rand.String(10), ".jsonl")
